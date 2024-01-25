@@ -1,0 +1,25 @@
+.leadCard{
+    align-items: center;
+    background-color: $red;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    margin: 1vh 0;
+    padding: 1vh 5vw;
+    width: 80vw;
+
+    &__position{
+        font-family: "Quicksand" , sans-serif;
+        font-size: 4.5vw;
+    }
+
+    &__number{
+        font-family: "Oswald" , sans-serif;
+        font-size: 5vw;
+    }
+
+    &__points{
+        font-family: "Quicksand" , sans-serif;
+        font-size: 3.5vw;
+    }
+}
