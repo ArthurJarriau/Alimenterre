@@ -1,12 +1,13 @@
 import React from 'react';
 import ScoreTracker from '../components/ScoreTracker';
 
-const ScoreCard = () => {
+const ScoreCard = ({ score, title, svg , color}) => {
+  
     return (
-        <div className="card-score" >
-          <ScoreTracker />
-          <h1 className='card-score__title'>Score de transport</h1>
-          <img src='/img/icon-truckCamion.svg' className='card-score__img'></img>
+        <div className="card-score" style={{ backgroundColor: color }}>
+          <ScoreTracker score={score} />
+          <h1 className='card-score__title'>{title}</h1>
+          <img src={`/img/icon-${svg}.svg`} className='card-score__img'></img>
         </div>
     )
 }
