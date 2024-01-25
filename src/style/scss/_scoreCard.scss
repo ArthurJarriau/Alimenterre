@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap');
 .card-score{
   position: relative;
   align-items: center;
@@ -12,7 +13,8 @@
     top: 50%;
     right: 50%;
     transform: translate(50%, -50%);
-    font-size: 2rem;
+    font-size: 1.5rem;
+    font-family:"Quicksand" , sans-serif;
     font-weight: 600;
   }
   &__img {

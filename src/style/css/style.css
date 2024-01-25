@@ -4,6 +4,7 @@
    License: none (public domain)
 */
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -128,6 +129,39 @@ table {
   color: white;
 }
 
+.card-score {
+  position: relative;
+  align-items: center;
+  width: 90vw;
+  margin: 0 auto;
+  height: 80px;
+  background-color: #F47D75;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+.card-score__title {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  font-size: 1.5rem;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+}
+.card-score__img {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  transform: translateY(50%);
+}
+.card-score svg {
+  position: absolute;
+  top: 0;
+  left: -5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 /* Regles generales */
 *,
 *:after,
@@ -158,50 +192,41 @@ img {
   /*alignement correct des images*/
 }
 
-.App {
-  text-align: center;
-}
-
-.App-header {
-  background-color: #282c34;
-  font-family: "Quicksand", sans-serif;
-  min-height: 100vh;
+.home {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding-top: 2rem;
+}
+
+.score-global {
+  background-color: black;
+  height: 248px;
+  width: 175px;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+  padding-top: 2rem;
+  border-radius: 8px;
+}
+
+.score-global__title {
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
   color: white;
 }
 
-.card-score {
-  position: relative;
-  align-items: center;
-  width: 90vw;
-  margin: 0 auto;
-  height: 80px;
-  background-color: #F47D75;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
 }
-.card-score__title {
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  transform: translate(50%, -50%);
+
+.card-list__title {
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
   font-size: 2rem;
-  font-weight: 600;
-}
-.card-score__img {
-  position: absolute;
-  top: 10%;
-  right: 5%;
-  transform: translateY(50%);
-}
-.card-score svg {
-  position: absolute;
-  top: 0;
-  left: -5%;
-  top: 50%;
-  transform: translateY(-50%);
 }
