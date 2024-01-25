@@ -8,7 +8,7 @@ const Login = () => {
   const { loginState, handleLogin } = useContext(AuthContext);
   const location = useLocation();
   
-  const from = /*location.state?.from ||*/ '/';
+  const from = /*location.state?.from ||*/ '/'; 
 
   if(loginState.user){
     return <Navigate
