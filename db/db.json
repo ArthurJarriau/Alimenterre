@@ -2,13 +2,13 @@
   "users": [
     {
       "id": "0",
-      "email": "test@mail.com",
-      "password": "azerty",
+      "email": "admin@mail.com",
+      "password": "1",
       "role": "admin"
     },
     {
       "id": "1",
-      "email": "test2@mail.com",
+      "email": "user@mail.com",
       "password": "azerty",
       "role": "user"
     }
