@@ -1,0 +1,42 @@
+{
+  "users": [
+    {
+      "id": "0",
+      "email": "test@mail.com",
+      "password": "azerty",
+      "role": "admin"
+    },
+    {
+      "id": "1",
+      "email": "test2@mail.com",
+      "password": "azerty",
+      "role": "user"
+    }
+  ],
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "userId": "0"
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "userId": "0"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1",
+      "userId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1",
+      "userId": "0"
+    }
+  ]
+}
