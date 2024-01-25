@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import Landing from "../pages/Landing";
 import Login from "../pages/Login";
 import Logout from "../pages/Logout";
+import Profile from "../pages/Profile";
 import Register from "../pages/Register";
 import Layout from "./Layout";
 
@@ -145,6 +146,7 @@ const App = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/logout" element={<Logout />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/profile" element={<Profile />} />
           </Routes>
         </Layout>
       </AuthContext.Provider>

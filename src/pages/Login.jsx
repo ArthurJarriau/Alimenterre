@@ -1,27 +1,23 @@
-import React, { useContext } from 'react';
-import LoginForm from '../components/LoginForm';
-import { AuthContext } from '../components/App';
-import { useLocation, Navigate} from "react-router-dom";
-
+import React, { useContext } from "react";
+import { Navigate, useLocation } from "react-router-dom";
+import { AuthContext } from "../components/App";
+import LoginForm from "../components/LoginForm";
 
 const Login = () => {
   const { loginState, handleLogin } = useContext(AuthContext);
   const location = useLocation();
-  
-  const from = /*location.state?.from ||*/ '/'; 
 
-  if(loginState.user){
-    return <Navigate
-        to={from}
-      />
+  const from = /*location.state?.from ||*/ "/";
+
+  if (loginState.user) {
+    return <Navigate to={from} />;
   }
-  
 
   return (
     <div>
       <div>
         <div>
-        {loginState.error}
+          {loginState.error}
           {!loginState.error && loginState.user}
 
           <LoginForm onSubmit={handleLogin} disabled={loginState.loading} />
