@@ -112,50 +112,69 @@ table {
   font-size: 3.5vw;
 }
 
-.App {
-  text-align: center;
+.preferency {
+  display: flex;
+  flex-direction: column;
+  margin: 0 5vw 2.5vh 5vw;
+  width: 80vw;
+}
+.preferency__title {
+  font-family: "Oswald", sans-serif;
+  font-size: 7.5vw;
+  margin-bottom: 2.5vh;
+}
+.preferency__container {
+  display: flex;
+  margin: 1.5vh 0;
+}
+.preferency__category {
+  font-family: "Quicksand", sans-serif;
+  font-size: 4vw;
+  width: 40vw;
 }
 
-.App-header {
-  background-color: #282c34;
-  font-family: "Quicksand", sans-serif;
-  min-height: 100vh;
+.identity {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 10vw;
+  position: relative;
+  width: 80vw;
+  margin-bottom: 15vh;
+}
+.identity__image {
+  border-radius: 35vw;
+}
+.identity__title {
+  background-color: #1E1E1E;
+  color: #F3F3F3;
+  font-family: "Oswald", sans-serif;
+  font-size: 7.5vw;
+  padding: 1.5vh 3.5vw;
+  position: absolute;
+  bottom: 7vh;
+}
+.identity__rewards {
+  position: relative;
+  top: 5vh;
+}
+.identity__badge {
+  margin: 0 2.5vw;
+}
+
+.profile {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 5vh;
 }
-
-/* Regles generales */
-*,
-*:after,
-*:before {
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font-size: 1.4rem;
-  /* 14px par défaut */
-  /*font-family: 'Noto sans', sans-serif;*/
-}
-
-a,
-a:hover,
-a:visited {
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  vertical-align: middle;
-  /*alignement correct des images*/
+.profile__logout {
+  background-color: #F47D75;
+  border-radius: 7.5vw;
+  color: #F3F3F3;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 900;
+  padding: 2vh 5vw;
 }
 
 .App {
@@ -205,3 +224,33 @@ img {
   top: 50%;
   transform: translateY(-50%);
 }
+
+/* Regles generales */
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.4rem;
+  /* 14px par défaut */
+  /*font-family: 'Noto sans', sans-serif;*/
+}
+
+a,
+a:hover,
+a:visited {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  /*alignement correct des images*/
+}/*# sourceMappingURL=style.css.map */
