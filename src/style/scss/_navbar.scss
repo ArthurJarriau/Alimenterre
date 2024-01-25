@@ -1,0 +1,32 @@
+.nav{
+    background-color: $white;
+    display: flex;
+    font-family: 'Quicksand' , sans-serif;
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__content--home{
+        position: relative;
+        background-color: #1E1E1E;
+        border-radius: 12vw;
+        padding: 6.5vw 6vw;
+        top: -2vh;
+    }
+
+    &__list{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0 5vw;
+        width: 100vw;
+    }
+
+    &__link{
+        color: $black;
+        display: flex;
+    }
+}

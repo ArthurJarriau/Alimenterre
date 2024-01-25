@@ -1,16 +1,16 @@
-import React from 'react'
-import Navbar from './Navbar'
+import React, { useContext } from "react";
+import { AuthContext } from "./App";
+import Navbar from "./Navbar";
 
-const Layout = props => {
+const Layout = (props) => {
+  const { loginState, handleLogout } = useContext(AuthContext);
 
-    return <div className="">
-        <Navbar />
-        <main>
-
-            {props.children}
-
-        </main>
+  return (
+    <div className="">
+      <main>{props.children}</main>
+      {loginState.user !== null && <Navbar />}
     </div>
-}
+  );
+};
 
-export default Layout
+export default Layout;
