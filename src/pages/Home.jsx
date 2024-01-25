@@ -2,11 +2,19 @@ import React, { useContext } from "react";
 import { AuthContext } from "../components/App";
 import LeaderBoardCard from "../components/LeaderBoardCard";
 import ScoreTracker from "../components/ScoreTracker";
+import ScoreCard from '../components/ScoreCard';
 const Home = () => {
   const { loginState, handleLogin } = useContext(AuthContext);
-
+    if (loginState.user === null) {
+        return (
+          <Navigate
+            to="/login"
+          />
+        );
+    }
   return (
     <main>
+      <ScoreCard />
       <ScoreTracker />
       <h1>home</h1>
       <LeaderBoardCard
