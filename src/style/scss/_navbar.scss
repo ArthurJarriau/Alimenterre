@@ -1,28 +1,40 @@
 .nav{
+    position: relative;
     background-color: $white;
     display: flex;
     font-family: 'Quicksand' , sans-serif;
+    height: 10vh;
+    justify-content: center;
 
     &__content{
+        width: 10vw;
         display: flex;
         flex-direction: column;
         align-items: center;
+        &--left {
+            margin-right: 10vw;
+        }
+        &--right {
+            margin-left: 10vw;
+        }
     }
 
     &__content--home{
-        position: relative;
+        position: absolute;
         background-color: #1E1E1E;
         border-radius: 12vw;
         padding: 6.5vw 6vw;
-        top: -2vh;
+        top: -3rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: fit-content;
     }
 
     &__list{
         display: flex;
         justify-content: space-around;
         align-items: center;
-        padding: 0 5vw;
-        width: 100vw;
+        gap: 10vw;
     }
 
     &__link{

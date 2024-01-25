@@ -62,40 +62,79 @@ table {
 /* Font-weight */
 /* Others */
 .nav {
+  position: relative;
   background-color: #F3F3F3;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   font-family: "Quicksand", sans-serif;
+  height: 10vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .nav__content {
+  width: 10vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.nav__content--left {
+  margin-right: 10vw;
+}
+.nav__content--right {
+  margin-left: 10vw;
 }
 .nav__content--home {
-  position: relative;
+  position: absolute;
   background-color: #1E1E1E;
   border-radius: 12vw;
   padding: 6.5vw 6vw;
-  top: -2vh;
+  top: -3rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 0 5vw;
-  width: 100vw;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10vw;
 }
 .nav__link {
   color: #1E1E1E;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .leadCard {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #F47D75;
   border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 1vh 0;
   padding: 1vh 5vw;
   width: 80vw;
@@ -113,6 +152,92 @@ table {
   font-size: 3.5vw;
 }
 
+.preferency {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 5vw 2.5vh 5vw;
+  width: 80vw;
+}
+.preferency__title {
+  font-family: "Oswald", sans-serif;
+  font-size: 7.5vw;
+  margin-bottom: 2.5vh;
+}
+.preferency__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1.5vh 0;
+}
+.preferency__category {
+  font-family: "Quicksand", sans-serif;
+  font-size: 4vw;
+  width: 40vw;
+}
+
+.identity {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 10vw;
+  position: relative;
+  width: 80vw;
+  margin-bottom: 15vh;
+}
+.identity__image {
+  border-radius: 35vw;
+}
+.identity__title {
+  background-color: #1E1E1E;
+  color: #F3F3F3;
+  font-family: "Oswald", sans-serif;
+  font-size: 7.5vw;
+  padding: 1.5vh 3.5vw;
+  position: absolute;
+  bottom: 7vh;
+}
+.identity__rewards {
+  position: relative;
+  top: 5vh;
+}
+.identity__badge {
+  margin: 0 2.5vw;
+}
+
+.profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 5vh;
+}
+.profile__logout {
+  background-color: #F47D75;
+  border-radius: 7.5vw;
+  color: #F3F3F3;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 900;
+  padding: 2vh 5vw;
+}
+
 .App {
   text-align: center;
 }
@@ -121,10 +246,19 @@ table {
   background-color: #282c34;
   font-family: "Quicksand", sans-serif;
   min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -166,7 +300,8 @@ table {
 *,
 *:after,
 *:before {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html {
