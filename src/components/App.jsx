@@ -1,25 +1,151 @@
-import React from 'react';
-import '../App.css';
+import React, { createContext, useEffect, useReducer,  } from 'react';
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
+import Login from '../pages/Login';
+import Logout from '../pages/Logout';
+import Layout from './Layout';
+import Home from '../pages/Home';
+
+export const AuthContext = createContext();
+
+
+
+const loginReducer = (state, action) => {
+  switch (action.type) {
+    case 'login_start':
+      return {
+        ...state,
+        loading: true,
+        error: null,
+      };
+    case 'login_success':
+      return {
+        ...state,
+        loading: false,
+        error: false,
+        user: action.payload,
+      };
+    case 'logout_success':
+      return {
+        ...state,
+        loading: false,
+        error: false,
+        user: null,
+      };
+
+
+    case 'login_error':
+      return {
+        ...state,
+        loading: false,
+        error: true,
+        user: null,
+      };
+    default:
+      return state;
+  }
+};
 
 const App = () => {
+
+
+
+  const initialState = {
+    loading: false,
+    error: false,
+    user: null,
+  };
+
+  const [loginState, dispatch] = useReducer(loginReducer, initialState);
+
+
+  const handleLogin = (credentials) => {
+
+    dispatch({ type: 'login_start' });
+
+    fetch('/api/auth/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(credentials),
+    }).then(res => res.json())
+      .then(data => {
+        if (data.msg === "success") {
+          dispatch({ type: 'login_success', payload: data.user })
+
+        }
+        else {
+          dispatch({ type: 'login_error' })
+        }
+
+      });
+
+
+  };
+
+  const handleLogout = () => {
+    //console.log('logout')
+
+    fetch('/api/auth/logout', {
+      method: 'POST',
+    }).then(response => {
+
+      if (response.ok) {
+        dispatch({ type: 'logout_success' });
+        //console.log(response.ok)
+      }
+      else {
+        dispatch({ type: 'login_error' });
+      }
+    })
+
+
+  };
+
+  const checkAuth = () => {
+    fetch('/api/auth/me', {
+      method: 'GET',
+      credentials: 'same-origin',
+    })
+      .then(res => {
+        console.log(res);
+        if (!res.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return res.json();
+      })
+      .then(data => {
+        dispatch({ type: 'login_success', payload: data });
+      })
+      .catch(error => {
+        console.error('Error during fetch operation:', error);
+        dispatch({ type: 'login_error' });
+      });
+  };
+
+
+
+
+  useEffect(() => {
+    checkAuth();
+    //console.log(loginState)
+  }, []);
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Bienvenue sur AlimenTerre</h1>
-        <p>Notre projet vise à vous aider à faire des choix alimentaires plus sains et plus respectueux de l'environnement.</p>
-        <p>Vous pouvez rechercher des produits par nom ou par code barre.</p>
-      </header>
-      <section>
-        <h2>EcoScore</h2>
-        <p>L'EcoScore est un indicateur environnemental qui vous aide à comprendre l'impact de vos choix alimentaires sur l'environnement. Il prend en compte des facteurs tels que les émissions de gaz à effet de serre, l'utilisation des terres et l'épuisement des ressources naturelles.</p>
-        
-      </section>
-      <section>
-        <h2>NutriScore</h2>
-        <p>Le NutriScore est un système de notation nutritionnelle qui vous aide à comprendre la qualité nutritionnelle des aliments. Il est basé sur une échelle de couleurs et de lettres allant de A (meilleur choix) à E (moins bon choix).</p>
-      </section>
-    </div>
+
+    <BrowserRouter>
+      <AuthContext.Provider value={{ loginState, handleLogin, handleLogout }}>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/logout" element={<Logout />} />
+          </Routes>
+        </Layout>
+      </AuthContext.Provider>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;

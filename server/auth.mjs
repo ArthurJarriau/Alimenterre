@@ -67,7 +67,7 @@ export const authMiddleware = settings => Router()
                             exp: Math.floor(Date.now() / 1000) + (60 * 60),
                             iat: Date.now()
                         }, settings.jwt.secret),
-                        userWithoutPwd
+                        user : userWithoutPwd
                     }
                     
                 } else {
