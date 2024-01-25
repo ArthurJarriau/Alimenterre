@@ -5,6 +5,7 @@ import Logout from '../pages/Logout';
 import Layout from './Layout';
 import Home from '../pages/Home';
 import Register from '../pages/Register';
+import Landing from '../pages/Landing';
 
 export const AuthContext = createContext();
 
@@ -157,7 +158,8 @@ const App = () => {
       <AuthContext.Provider value={{ loginState, handleLogin, handleLogout, handleRegister }}>
         <Layout>
           <Routes>
-            <Route path="/" element={<Home />} />
+          <Route path="/" element={<Landing />} />
+            <Route path="/home" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/logout" element={<Logout />} />
             <Route path="/register" element={<Register />} />
