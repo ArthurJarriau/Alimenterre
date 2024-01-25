@@ -4,6 +4,7 @@ import Login from '../pages/Login';
 import Logout from '../pages/Logout';
 import Layout from './Layout';
 import Home from '../pages/Home';
+import Register from '../pages/Register';
 
 export const AuthContext = createContext();
 
@@ -124,6 +125,24 @@ const App = () => {
   };
 
 
+  const handleRegister = (credentials) => {
+    fetch('/api/users', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...credentials,
+          role:'user',
+        }),
+    }).then(res => res.json())
+        .then(data => {
+            console.log('register');
+            console.log(data);
+            return handleLogin(credentials);
+        })
+}
+
 
 
   useEffect(() => {
@@ -135,12 +154,13 @@ const App = () => {
   return (
 
     <BrowserRouter>
-      <AuthContext.Provider value={{ loginState, handleLogin, handleLogout }}>
+      <AuthContext.Provider value={{ loginState, handleLogin, handleLogout, handleRegister }}>
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/logout" element={<Logout />} />
+            <Route path="/register" element={<Register />} />
           </Routes>
         </Layout>
       </AuthContext.Provider>
