@@ -10,7 +10,7 @@ function App() {
         <p>Vous pouvez rechercher des produits par nom ou par code barre.</p>
       </header>
       <section>
-        <h2>EcoScore</h2>
+        <h2>PAUL</h2>
         <p>L'EcoScore est un indicateur environnemental qui vous aide à comprendre l'impact de vos choix alimentaires sur l'environnement. Il prend en compte des facteurs tels que les émissions de gaz à effet de serre, l'utilisation des terres et l'épuisement des ressources naturelles.</p>
         
       </section>
