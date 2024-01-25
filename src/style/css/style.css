@@ -265,19 +265,23 @@ table {
 
 .card-score {
   position: relative;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 90vw;
   margin: 0 auto;
   height: 80px;
   background-color: #F47D75;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
 .card-score__title {
   position: absolute;
   top: 50%;
   right: 50%;
-  transform: translate(50%, -50%);
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
   font-size: 1.5rem;
   font-family: "Quicksand", sans-serif;
   font-weight: 600;
@@ -286,14 +290,16 @@ table {
   position: absolute;
   top: 10%;
   right: 5%;
-  transform: translateY(50%);
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
 }
 .card-score svg {
   position: absolute;
   top: 0;
   left: -5%;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 /* Regles generales */
@@ -328,9 +334,16 @@ img {
 }
 
 .home {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-top: 2rem;
 }
 
@@ -338,10 +351,17 @@ img {
   background-color: black;
   height: 248px;
   width: 175px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 4rem;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-top: 2rem;
   border-radius: 8px;
 }
@@ -354,8 +374,13 @@ img {
 }
 
 .card-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 1rem;
   margin-top: 2rem;
 }
@@ -364,4 +389,56 @@ img {
   font-family: "Quicksand", sans-serif;
   font-weight: bold;
   font-size: 2rem;
+}
+
+.recom {
+  font-family: "Oswald", sans-serif;
+  margin: 0 4vw;
+  font-size: 2rem;
+}
+.recom__title {
+  font-size: 2.4rem;
+  text-align: center;
+  margin: 5vh 0;
+}
+.recom__top3-item, .recom__vedette-item {
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(33.33% - 10px);
+          flex: 0 0 calc(33.33% - 10px);
+  margin: 2vh 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.recom__top3-items, .recom__vedette-items {
+  margin: 2vh 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.recom__top3-elipse, .recom__vedette-elipse {
+  width: 80px;
+}
+.recom__top3-img, .recom__vedette-img {
+  position: absolute;
+  top: 1vh;
+  left: 2.5vw;
+  width: 22.5vw;
+}
+.recom__top3-title, .recom__vedette-title {
+  margin: 4vh 0;
 }
