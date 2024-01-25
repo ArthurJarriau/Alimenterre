@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
-const ScoreTracker = () => {
-  const [score, setScore] = useState(80); 
+const ScoreTracker = ({score}) => {
   const radius = 22.5; // Ajustez le rayon proportionnellement à la nouvelle hauteur
   const circumference = 2 * Math.PI * radius;
   const offset = circumference - (score / 100 * circumference);

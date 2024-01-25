@@ -15,8 +15,12 @@ const Home = () => {
     }
   return (
     <main>
-      <ScoreCard />
-      <ScoreTracker />
+        <div className="card-list" style={{display:'flex',flexDirection:'column',gap:'1rem',marginTop:'2rem'}}>
+            <ScoreCard score={75} title={'Score de transport'} svg={'truck'} color={"#F47D75"}/>
+            <ScoreCard score={50} title={'Eco score'} svg={'ecoscore'} color={"#BDDCFC"}/>
+            <ScoreCard score={25} title={'Epi score'} svg={'episcore'}color={"#D2F475"}/>
+            <ScoreCard score={15} title={'Nutriscore'} svg={'nutriscore'}color={"#F47D75"}/>
+        </div>
       <h1>home</h1>
       <LeaderBoardCard
         position="1st"
