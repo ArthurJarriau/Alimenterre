@@ -31,7 +31,7 @@ const Navbar = () => {
             </Link>
           </div>
 
-          <div className="nav__content">
+          <div className="nav__content nav__content--left">
             <svg
               width="17"
               height="19"
@@ -64,7 +64,7 @@ const Navbar = () => {
             </svg>
             <Link to="/" className="nav__link"></Link>
           </div>
-          <div className="nav__content">
+          <div className="nav__content nav__content--right">
             <svg
               width="22"
               height="21"

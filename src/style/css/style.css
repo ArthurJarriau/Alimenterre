@@ -61,40 +61,79 @@ table {
 /* Font-weight */
 /* Others */
 .nav {
+  position: relative;
   background-color: #F3F3F3;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   font-family: "Quicksand", sans-serif;
+  height: 10vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .nav__content {
+  width: 10vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.nav__content--left {
+  margin-right: 10vw;
+}
+.nav__content--right {
+  margin-left: 10vw;
 }
 .nav__content--home {
-  position: relative;
+  position: absolute;
   background-color: #1E1E1E;
   border-radius: 12vw;
   padding: 6.5vw 6vw;
-  top: -2vh;
+  top: -3rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 0 5vw;
-  width: 100vw;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10vw;
 }
 .nav__link {
   color: #1E1E1E;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .leadCard {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #F47D75;
   border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 1vh 0;
   padding: 1vh 5vw;
   width: 80vw;
@@ -113,8 +152,13 @@ table {
 }
 
 .preferency {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: 0 5vw 2.5vh 5vw;
   width: 80vw;
 }
@@ -124,6 +168,8 @@ table {
   margin-bottom: 2.5vh;
 }
 .preferency__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 1.5vh 0;
 }
@@ -134,9 +180,16 @@ table {
 }
 
 .identity {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: 10vw;
   position: relative;
   width: 80vw;
@@ -163,9 +216,16 @@ table {
 }
 
 .profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 5vh;
 }
 .profile__logout {
@@ -185,29 +245,42 @@ table {
   background-color: #282c34;
   font-family: "Quicksand", sans-serif;
   min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
 .card-score {
   position: relative;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 90vw;
   margin: 0 auto;
   height: 80px;
   background-color: #F47D75;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
 .card-score__title {
   position: absolute;
   top: 50%;
   right: 50%;
-  transform: translate(50%, -50%);
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
   font-size: 2rem;
   font-weight: 600;
 }
@@ -215,21 +288,24 @@ table {
   position: absolute;
   top: 10%;
   right: 5%;
-  transform: translateY(50%);
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
 }
 .card-score svg {
   position: absolute;
   top: 0;
   left: -5%;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 /* Regles generales */
 *,
 *:after,
 *:before {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html {
@@ -253,4 +329,56 @@ img {
   height: auto;
   vertical-align: middle;
   /*alignement correct des images*/
-}/*# sourceMappingURL=style.css.map */
+}
+
+.recom {
+  font-family: "Oswald", sans-serif;
+  margin: 0 4vw;
+  font-size: 2rem;
+}
+.recom__title {
+  font-size: 2.4rem;
+  text-align: center;
+  margin: 5vh 0;
+}
+.recom__top3-item, .recom__vedette-item {
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(33.33% - 10px);
+          flex: 0 0 calc(33.33% - 10px);
+  margin: 2vh 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.recom__top3-items, .recom__vedette-items {
+  margin: 2vh 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.recom__top3-elipse, .recom__vedette-elipse {
+  width: 80px;
+}
+.recom__top3-img, .recom__vedette-img {
+  position: absolute;
+  top: 1vh;
+  left: 2.5vw;
+  width: 22.5vw;
+}
+.recom__top3-title, .recom__vedette-title {
+  margin: 4vh 0;
+}
