@@ -63,6 +63,7 @@ table {
 .nav {
   background-color: #F3F3F3;
   display: flex;
+  font-family: "Quicksand", sans-serif;
 }
 .nav__content {
   display: flex;
