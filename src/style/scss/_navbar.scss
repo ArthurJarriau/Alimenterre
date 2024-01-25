@@ -3,7 +3,7 @@
     background-color: $white;
     display: flex;
     font-family: 'Quicksand' , sans-serif;
-    height: 8vh;
+    height: 10vh;
     justify-content: center;
 
     &__content{
@@ -24,7 +24,7 @@
         background-color: #1E1E1E;
         border-radius: 12vw;
         padding: 6.5vw 6vw;
-        top: -3vh;
+        top: -3rem;
         left: 50%;
         transform: translateX(-50%);
         width: fit-content;

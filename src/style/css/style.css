@@ -67,7 +67,7 @@ table {
   display: -ms-flexbox;
   display: flex;
   font-family: "Quicksand", sans-serif;
-  height: 8vh;
+  height: 10vh;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -96,7 +96,7 @@ table {
   background-color: #1E1E1E;
   border-radius: 12vw;
   padding: 6.5vw 6vw;
-  top: -3vh;
+  top: -3rem;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -329,4 +329,56 @@ img {
   height: auto;
   vertical-align: middle;
   /*alignement correct des images*/
+}
+
+.recom {
+  font-family: "Oswald", sans-serif;
+  margin: 0 4vw;
+  font-size: 2rem;
+}
+.recom__title {
+  font-size: 2.4rem;
+  text-align: center;
+  margin: 5vh 0;
+}
+.recom__top3-item, .recom__vedette-item {
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(33.33% - 10px);
+          flex: 0 0 calc(33.33% - 10px);
+  margin: 2vh 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.recom__top3-items, .recom__vedette-items {
+  margin: 2vh 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.recom__top3-elipse, .recom__vedette-elipse {
+  width: 80px;
+}
+.recom__top3-img, .recom__vedette-img {
+  position: absolute;
+  top: 1vh;
+  left: 2.5vw;
+  width: 22.5vw;
+}
+.recom__top3-title, .recom__vedette-title {
+  margin: 4vh 0;
 }

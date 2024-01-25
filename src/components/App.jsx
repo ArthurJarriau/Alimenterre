@@ -7,6 +7,7 @@ import Logout from "../pages/Logout";
 import Profile from "../pages/Profile";
 import Register from "../pages/Register";
 import Layout from "./Layout";
+import Recommandations from '../pages/Recommandations';
 
 export const AuthContext = createContext();
 
@@ -144,6 +145,7 @@ const App = () => {
             <Route path="/" element={<Landing />} />
             <Route path="/home" element={<Home />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/healthy" element={<Recommandations />} />
             <Route path="/logout" element={<Logout />} />
             <Route path="/register" element={<Register />} />
             <Route path="/profile" element={<Profile />} />
