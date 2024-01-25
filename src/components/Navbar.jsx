@@ -48,7 +48,7 @@ const Navbar = () => {
               Tracker
             </Link>
           </div>
-          <div className="nav__content">
+          <div className="nav__content nav__content--home">
             <svg
               width="35"
               height="30"
