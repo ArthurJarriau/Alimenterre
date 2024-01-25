@@ -14,14 +14,18 @@ const Home = () => {
         );
     }
   return (
-    <main>
-        <div className="card-list" style={{display:'flex',flexDirection:'column',gap:'1rem',marginTop:'2rem'}}>
+    <section className="home" >
+        <div className="score-global" >
+            <ScoreTracker score={75} size={'large'} />
+            <h2 className="score-global__title" >Score</h2>
+        </div>
+        <div className="card-list" >
+            <h2 className="card-list__title" >Détails des scores</h2>
             <ScoreCard score={75} title={'Score de transport'} svg={'truck'} color={"#F47D75"}/>
             <ScoreCard score={50} title={'Eco score'} svg={'ecoscore'} color={"#BDDCFC"}/>
             <ScoreCard score={25} title={'Epi score'} svg={'episcore'}color={"#D2F475"}/>
             <ScoreCard score={15} title={'Nutriscore'} svg={'nutriscore'}color={"#F47D75"}/>
         </div>
-      <h1>home</h1>
       <LeaderBoardCard
         position="1st"
         name="Jean-Marie DURAND"
@@ -46,7 +50,7 @@ const Home = () => {
         points="2710"
         bgColor="#F47D75"
       />
-    </main>
+    </section>
   );
 };
 
