@@ -1,0 +1,23 @@
+.preferency{
+    display: flex;
+    flex-direction: column;
+    margin: 0 5vw 2.5vh 5vw;
+    width: 80vw;
+
+    &__title{
+        font-family: "Oswald" , sans-serif;
+        font-size: 7.5vw;
+        margin-bottom: 2.5vh;
+    }
+
+    &__container{
+        display: flex;
+        margin: 1.5vh 0;
+    }
+
+    &__category{
+        font-family: 'Quicksand' , sans-serif;
+        font-size: 4vw;
+        width: 40vw;
+    }
+}
