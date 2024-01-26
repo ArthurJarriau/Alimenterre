@@ -5,7 +5,6 @@
       "email": "admin@mail.com",
       "password": "1",
       "role": "admin",
-      "allergie": null,
       "points": 206780
     },
     {
@@ -13,7 +12,6 @@
       "email": "user@mail.com",
       "password": "azerty",
       "role": "user",
-      "allergie": null,
       "points": 206700
     },
     {
@@ -21,7 +19,6 @@
       "email": "test@mail.com",
       "password": "azerty",
       "role": "user",
-      "allergie": null,
       "points": 206990
     },
     {
@@ -29,7 +26,6 @@
       "email": "example@mail.com",
       "password": "azerty",
       "role": "user",
-      "allergie": null,
       "points": 206000
     },
     {
@@ -37,7 +33,6 @@
       "email": "exple@mail.com",
       "password": "azerty",
       "role": "user",
-      "allergie": null,
       "points": 205900
     },
     {
@@ -53,104 +48,7 @@
       "email": "blabla@mail.com",
       "password": "azerty",
       "role": "user",
-      "allergie": null,
       "points": 205360
-    },
-    {
-      "id": "SB-lJ0i"
-    },
-    {
-      "id": "QgS-Oyj"
-    },
-    {
-      "id": "zmWisGU"
-    },
-    {
-      "id": "d0kzKLC"
-    },
-    {
-      "id": "_izR-IZ"
-    },
-    {
-      "id": "Vu7D31_"
-    },
-    {
-      "id": "ABAtXS7"
-    },
-    {
-      "id": "CggqMGJ"
-    },
-    {
-      "id": "DQMwcIL"
-    },
-    {
-      "id": "i-g1F4q"
-    },
-    {
-      "id": "_b1a-_e"
-    },
-    {
-      "id": "wD_j5B3"
-    },
-    {
-      "id": "uIadUGB"
-    },
-    {
-      "id": "zK7I3XE"
-    },
-    {
-      "id": "_-nXwo3"
-    },
-    {
-      "id": "ImCboK6"
-    },
-    {
-      "id": "pOdQWkE"
-    },
-    {
-      "id": "71tcPBs"
-    },
-    {
-      "id": "fJpAkb3"
-    },
-    {
-      "id": "F2Rd052"
-    },
-    {
-      "id": "WHFvK_r"
-    },
-    {
-      "id": "jUP496-"
-    },
-    {
-      "id": "uRD7EVz"
-    },
-    {
-      "id": "c1pPPYq"
-    },
-    {
-      "id": "AOqkzuH"
-    },
-    {
-      "id": "NXVG023"
-    },
-    {
-      "id": "iWrlhTt"
-    },
-    {
-      "id": "8Nqc6if"
-    },
-    {
-      "id": "g9kL5g7"
-    },
-    {
-      "id": "wMx8bMy"
-    },
-    {
-      "id": "GeBx3KO"
-    },
-    {
-      "id": "oB2Vny1"
     }
   ],
   "posts": [

@@ -11,7 +11,8 @@ const Home = () => {
   }
   return (
     <section className="home" >
-        <h1>HOME</h1>
+      <ScoreTracker score={75} size={"homepage"} />
+      <div className="home__score">Score</div>
     </section>
   );
 };

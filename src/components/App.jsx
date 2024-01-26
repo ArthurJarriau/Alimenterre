@@ -9,6 +9,7 @@ import Recommandations from "../pages/Recommandations";
 import Register from "../pages/Register";
 import Score from "../pages/Score";
 import Layout from "./Layout";
+import Tracker from "../pages/Tracker";
 
 export const AuthContext = createContext();
 
@@ -169,6 +170,7 @@ const App = () => {
             <Route path="/register" element={<Register />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/score" element={<Score />} />
+            <Route path="/tracker" element={<Tracker />} />
           </Routes>
         </Layout>
       </AuthContext.Provider>

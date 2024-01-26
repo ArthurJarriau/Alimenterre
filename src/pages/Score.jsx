@@ -67,7 +67,6 @@ const Home = () => {
         points="2710"
         bgColor="#F47D75"
       />
-      <CardHisto imageUrl="/img/banane.png" name="Banane" points="100" />
     </section>
   );
 };
