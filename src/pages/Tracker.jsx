@@ -3,6 +3,7 @@ import LoginForm from '../components/LoginForm';
 import { AuthContext } from '../components/App';
 import { useLocation, Navigate } from "react-router-dom";
 import CardHisto from '../components/CardHisto';
+import BarcodeScanner from '../components/BarcodeScanner';
 
 const Tracker = () => {
     const { loginState } = useContext(AuthContext);
@@ -11,6 +12,13 @@ const Tracker = () => {
     const [inputValue, setInputValue] = useState('');
     const [autoComp, setAutoComp] = useState([]);
     const [codeBarre, setCodeBarre] = useState(false);
+    const [isScanning, setIsScanning] = useState(false);
+    const [scanResult, setScanResult] = useState(null);
+
+    const handleScan = (result) => {
+        setScanResult(result.codeResult.code);
+        setIsScanning(false);
+    };
 
     const getData = () => {
         console.log('getData() appelée')
@@ -62,7 +70,7 @@ const Tracker = () => {
                     type="text"
                     className=""
                     placeholder="nom ou code barre..."
-                    value={inputValue}
+                    value={inputValue || scanResult}
                     onChange={(e) => {
                         if (e.target.value.length >= 3) {
                             if(isNaN(e.target.value)){
@@ -78,6 +86,10 @@ const Tracker = () => {
                         
                     }}
                 />
+                <button onClick={() => setIsScanning(true)} style={{paddingTop:'5rem'}}>
+                Start Scanner
+                </button>
+                {isScanning && <BarcodeScanner onDetected={handleScan} />}
                 <button>
                     <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="7.5" cy="7.5" r="7" stroke="black" />
