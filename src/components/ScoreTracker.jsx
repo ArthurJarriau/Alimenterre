@@ -43,7 +43,7 @@ const ScoreTracker = ({score, size}) => {
   const offset = circumference - (score / 100 * circumference);
 
   return (
-    <div className="score" >
+    <div>
       <svg height={height} width={width} >
         <g transform={`rotate(-90 ${width/2} ${cy})`}> 
           <circle

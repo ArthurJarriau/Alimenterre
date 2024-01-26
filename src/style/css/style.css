@@ -62,12 +62,14 @@ table {
 /* Font-weight */
 /* Others */
 .nav {
-  position: relative;
+  position: fixed;
   background-color: #F3F3F3;
   display: flex;
   font-family: "Quicksand", sans-serif;
   height: 10vh;
+  width: 100vw;
   justify-content: center;
+  bottom: 0;
 }
 .nav__content {
   width: 10vw;
@@ -291,11 +293,12 @@ img {
   /*alignement correct des images*/
 }
 
-.home {
+.score {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 2rem;
+  padding-bottom: 15vh;
 }
 
 .score-global {
