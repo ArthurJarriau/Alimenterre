@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { Navigate } from "react-router-dom";
 import { AuthContext } from "../components/App";
-import CardHisto from "../components/CardHisto";
 import LeaderBoardCard from "../components/LeaderBoardCard";
 import ScoreCard from "../components/ScoreCard";
 import ScoreTracker from "../components/ScoreTracker";
@@ -67,7 +66,7 @@ const Home = () => {
         points="2710"
         bgColor="#F47D75"
       />
-      <CardHisto imageUrl="/img/banane.png" name="Banane" points="100" />
+      {/* <CardHisto imageUrl="/img/banane.png" name="Banane" points="100" /> */}
     </section>
   );
 };
