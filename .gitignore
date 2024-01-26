@@ -23,3 +23,4 @@ yarn-debug.log*
 yarn-error.log*
 prepros.config
 /src/style/css/style.css
+/src/style/css/style.css.map
