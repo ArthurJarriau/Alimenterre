@@ -2,53 +2,67 @@
   "users": [
     {
       "id": "0",
+      "username":"admin",
       "email": "admin@mail.com",
       "password": "1",
       "role": "admin",
-      "points": 206780
+      "points_gen": 17,
+      "historique": ["https://world.openfoodfacts.net/api/v2/product/7622300689124"]
     },
     {
       "id": "1",
+      "username":"user",
       "email": "user@mail.com",
       "password": "azerty",
       "role": "user",
-      "points": 206700
+      "points_gen": 67,
+      "historique": ["https://world.openfoodfacts.net/api/v2/product/7622300689124"]
     },
     {
       "id": "2",
+      "username":"test",
       "email": "test@mail.com",
       "password": "azerty",
       "role": "user",
-      "points": 206990
+      "points_gen": 90,
+      "historique": ["https://world.openfoodfacts.net/api/v2/product/7622300689124"]
     },
     {
       "id": "3",
+      "username":"michel",
       "email": "example@mail.com",
       "password": "azerty",
       "role": "user",
-      "points": 206000
+      "points_gen": 12,
+      "historique": ["https://world.openfoodfacts.net/api/v2/product/7622300689124"]
     },
     {
       "id": "4",
+      "username":"caroline",
       "email": "exple@mail.com",
       "password": "azerty",
       "role": "user",
-      "points": 205900
+      "points_gen": 78,
+      "historique": ["https://world.openfoodfacts.net/api/v2/product/7622300689124"]
     },
     {
       "id": "5",
+      "username":"cesar",
       "email": "okay@mail.com",
       "password": "azerty",
       "role": "user",
       "allergie": null,
-      "points": 205490
+      "points_gen": 65,
+      "historique": ["https://world.openfoodfacts.net/api/v2/product/7622300689124"]
     },
     {
       "id": "6",
+      "username":"blabla",
       "email": "blabla@mail.com",
       "password": "azerty",
       "role": "user",
-      "points": 205360
+      "points_gen": 56,
+      "historique": ["https://world.openfoodfacts.net/api/v2/product/7622300689124"]
     }
   ],
   "posts": [
