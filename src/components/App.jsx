@@ -5,6 +5,7 @@ import Landing from "../pages/Landing";
 import Login from "../pages/Login";
 import Logout from "../pages/Logout";
 import Profile from "../pages/Profile";
+import Score from "../pages/Score";
 import Register from "../pages/Register";
 import Layout from "./Layout";
 import Recommandations from '../pages/Recommandations';
@@ -149,6 +150,7 @@ const App = () => {
             <Route path="/logout" element={<Logout />} />
             <Route path="/register" element={<Register />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/score" element={<Score />} />
           </Routes>
         </Layout>
       </AuthContext.Provider>

@@ -1,10 +1,13 @@
 .nav{
-    position: relative;
+    position: fixed;
     background-color: $white;
     display: flex;
     font-family: 'Quicksand' , sans-serif;
     height: 10vh;
+    width: 100vw;
     justify-content: center;
+    bottom: 0;
+    
 
     &__content{
         width: 10vw;
