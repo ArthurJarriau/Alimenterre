@@ -5,20 +5,50 @@
       "email": "admin@mail.com",
       "password": "1",
       "role": "admin",
-      "allergie": null
+      "points": 206780
     },
     {
       "id": "1",
       "email": "user@mail.com",
       "password": "azerty",
       "role": "user",
-      "allergie": null
+      "points": 206700
     },
     {
-      "email": "admin@mail.com",
-      "password": "1",
+      "id": "2",
+      "email": "test@mail.com",
+      "password": "azerty",
       "role": "user",
-      "id": "eIWaBw-"
+      "points": 206990
+    },
+    {
+      "id": "3",
+      "email": "example@mail.com",
+      "password": "azerty",
+      "role": "user",
+      "points": 206000
+    },
+    {
+      "id": "4",
+      "email": "exple@mail.com",
+      "password": "azerty",
+      "role": "user",
+      "points": 205900
+    },
+    {
+      "id": "5",
+      "email": "okay@mail.com",
+      "password": "azerty",
+      "role": "user",
+      "allergie": null,
+      "points": 205490
+    },
+    {
+      "id": "6",
+      "email": "blabla@mail.com",
+      "password": "azerty",
+      "role": "user",
+      "points": 205360
     }
   ],
   "posts": [
