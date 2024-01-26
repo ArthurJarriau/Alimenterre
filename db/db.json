@@ -13,6 +13,12 @@
       "password": "azerty",
       "role": "user",
       "allergie": null
+    },
+    {
+      "email": "admin@mail.com",
+      "password": "1",
+      "role": "user",
+      "id": "eIWaBw-"
     }
   ],
   "posts": [
