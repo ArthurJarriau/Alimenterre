@@ -97,7 +97,6 @@ const App = () => {
       credentials: "same-origin",
     })
       .then((res) => {
-        console.log(res);
         if (!res.ok) {
           throw new Error("Network response was not ok");
         }
@@ -131,9 +130,28 @@ const App = () => {
       });
   };
 
+  const recupUser = () => {
+    fetch("/api/auth/me", {
+      method: "GET",
+      credentials: "same-origin",
+    })
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return res.json();
+      })
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => {
+        console.error("Error during fetch operation:", error);
+      });
+  };
+
   useEffect(() => {
     checkAuth();
-    //console.log(loginState)
+    recupUser();
   }, []);
 
   return (
