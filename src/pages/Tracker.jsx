@@ -15,6 +15,7 @@ const Tracker = () => {
     const [isScanning, setIsScanning] = useState(false);
     const [scanResult, setScanResult] = useState(null);
     const [textareaValue, setTextareaValue] = useState('Aucun code barre détecté');
+    const [barcodeValue, setBarcodeValue] = useState(null);
 
     const handleScan = (result) => {
         setScanResult(result.codeResult.code);
@@ -97,7 +98,7 @@ const Tracker = () => {
                     right: '35px',}}>
                 Start Scanner
                 </button>}
-                {isScanning && <BarcodeScanner onDetected={handleScan} setTextareaValue={setTextareaValue}/>}
+                {isScanning && <BarcodeScanner onDetected={handleScan} setTextareaValue={setTextareaValue} setBarcodeValue={setBarcodeValue}/>}
                 {!isScanning && <button>
                     <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="7.5" cy="7.5" r="7" stroke="black" />

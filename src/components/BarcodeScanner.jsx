@@ -2,19 +2,21 @@ import React, { useState } from 'react';
 import Scanner from './Scanner';
 import {Fab, TextareaAutosize, Paper} from '@mui/material';
 import ArrowBack from '@mui/icons-material/ArrowBack';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-const BarcodeScanner = ({setTextareaValue}) => {
+const BarcodeScanner = ({setTextareaValue, setBarcodeValue}) => {
   const [results, setResults] = useState([]);
   const [scanning, setScanning] = useState(false);
-
+  const navigate = useNavigate();
   const _scan = () => {
     setScanning(!scanning);
   }
 
   const _onDetected = result => {
     setTextareaValue(result.codeResult.code);
+    setBarcodeValue("3560071275808");
     setResults([...results, result]);
+    navigate('/product', { state: { barcodeValue: "3560071275808" } });
   };
 
   return (

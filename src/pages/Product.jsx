@@ -1,8 +1,11 @@
+import { useLocation } from "react-router-dom";
 import About from "../components/About";
 import Aliment from "../components/Aliment";
 import Similar from "../components/Similar";
 
 const Product = (props) => {
+  const location = useLocation();
+  console.log(location.state.barcodeValue);
   return (
     <main className="product">
       <Aliment
