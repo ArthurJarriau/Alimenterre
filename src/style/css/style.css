@@ -418,4 +418,34 @@ img {
   font-family: "Oswald", sans-serif;
   font-weight: 600;
   font-size: 2.4rem;
+}
+
+.home {
+  height: 100vh;
+  padding-bottom: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://cdn.discordapp.com/attachments/1199382210218819586/1200260461216661544/image3_60-100pts.png?ex=65c588a9&is=65b313a9&hm=ace57432889163140d4e6f1d2b541a43c52b6ecebb5a5af9956e7131205642ce&");
+}
+.home div {
+  background-color: rgba(0, 0, 0, 0.259);
+  width: 40vw;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  font-family: "Oswald", sans-serif;
+  padding-bottom: 1vh;
+  border-radius: 8px 8px 0 0;
+}
+.home__score {
+  height: 5vh !important;
+  border-radius: 0 0 8px 8px !important;
 }/*# sourceMappingURL=style.css.map */
