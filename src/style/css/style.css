@@ -370,4 +370,52 @@ img {
 }
 .recom__top3-title, .recom__vedette-title {
   margin: 4vh 0;
+}
+
+.tracker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tracker .search-bar {
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: center;
+  position: relative;
+}
+.tracker .search-bar input {
+  background-color: white;
+  border-radius: 8px;
+  border: 0px solid black;
+  margin: 2vh 0;
+  height: 4vh;
+  width: 60vw;
+  padding: 0 1vw 0 3vw;
+  max-width: 350px;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+}
+.tracker .search-bar input:focus-visible {
+  outline: none;
+}
+.tracker .search-bar button {
+  height: 3vh;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 1vw;
+}
+.tracker .search-bar .autoComp {
+  position: absolute;
+  bottom: -55px;
+  background-color: white;
+  width: 60vw;
+  max-width: 350px;
+  padding: 0vh 2vw;
+}
+.tracker__title {
+  margin: 4vh 0 0 0;
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  font-size: 2.4rem;
 }/*# sourceMappingURL=style.css.map */
