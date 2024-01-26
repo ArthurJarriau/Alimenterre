@@ -13,7 +13,7 @@ const About = (props) => {
   } = props;
   return (
     <section className="about">
-      <h2 className="about__title">À propos de la {name}</h2>
+      <h2 className="about__title">À propos de : {name}</h2>
       <div className="about__origin">
         <h3 className="about__subtitle">Origine</h3>
         <p className="about__text">{origin}</p>

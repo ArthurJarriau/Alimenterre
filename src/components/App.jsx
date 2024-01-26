@@ -126,8 +126,8 @@ const App = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log("register");
-        console.log(data);
+        //console.log("register");
+        //console.log(data);
         return handleLogin(credentials);
       });
   };

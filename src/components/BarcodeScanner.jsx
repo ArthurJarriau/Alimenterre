@@ -14,9 +14,9 @@ const BarcodeScanner = ({setTextareaValue, setBarcodeValue}) => {
 
   const _onDetected = result => {
     setTextareaValue(result.codeResult.code);
-    setBarcodeValue("3560071275808");
+    setBarcodeValue("3560070794683");
     setResults([...results, result]);
-    navigate('/product', { state: { barcodeValue: "3560071275808" } });
+    navigate('/product', { state: { barcodeValue: "3560070794683" } });
   };
 
   return (
@@ -35,7 +35,7 @@ const BarcodeScanner = ({setTextareaValue, setBarcodeValue}) => {
       <TextareaAutosize
             style={{fontSize:32, width:'300px', height:100, marginTop:30}}
             rowsmax={4}
-            value={results[0] ? "3560071275808" : 'Aucun code barre détecté'}
+            value={results[0] ? "3560070794683" : 'Aucun code barre détecté'}
         />
 
     </div>
