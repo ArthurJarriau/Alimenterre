@@ -5,10 +5,10 @@ import Landing from "../pages/Landing";
 import Login from "../pages/Login";
 import Logout from "../pages/Logout";
 import Profile from "../pages/Profile";
-import Score from "../pages/Score";
+import Recommandations from "../pages/Recommandations";
 import Register from "../pages/Register";
+import Score from "../pages/Score";
 import Layout from "./Layout";
-import Recommandations from '../pages/Recommandations';
 
 export const AuthContext = createContext();
 
