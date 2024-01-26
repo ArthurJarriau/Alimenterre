@@ -14,6 +14,7 @@ const Tracker = () => {
     const [codeBarre, setCodeBarre] = useState(false);
     const [isScanning, setIsScanning] = useState(false);
     const [scanResult, setScanResult] = useState(null);
+    const [textareaValue, setTextareaValue] = useState('Aucun code barre détecté');
 
     const handleScan = (result) => {
         setScanResult(result.codeResult.code);
@@ -61,12 +62,12 @@ const Tracker = () => {
     if (!loginState.user) {
         return <Navigate to={from} />;
     }
-
+    
     return (
         <section className='tracker'>
             <h2 className='tracker__title'>Tracker Alimentation</h2>
             <section className="search-bar">
-                <input
+            {!isScanning && <input
                     type="text"
                     className=""
                     placeholder="nom ou code barre..."
@@ -85,17 +86,24 @@ const Tracker = () => {
                         setInputValue(e.target.value);
                         
                     }}
-                />
-                <button onClick={() => setIsScanning(true)} style={{paddingTop:'5rem'}}>
+                />}
+                {!isScanning && <button onClick={() => setIsScanning(true)} style={{backgroundImage: 'url("/img/scanner.png")', 
+                    backgroundSize: 'cover', 
+                    border: 'none', 
+                    color: 'transparent', 
+                    width: '20px', 
+                    height: '20px',
+                    position: 'absolute',
+                    right: '35px',}}>
                 Start Scanner
-                </button>
-                {isScanning && <BarcodeScanner onDetected={handleScan} />}
-                <button>
+                </button>}
+                {isScanning && <BarcodeScanner onDetected={handleScan} setTextareaValue={setTextareaValue}/>}
+                {!isScanning && <button>
                     <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="7.5" cy="7.5" r="7" stroke="black" />
                         <path d="M17.1464 17.8536C17.3417 18.0488 17.6583 18.0488 17.8536 17.8536C18.0488 17.6583 18.0488 17.3417 17.8536 17.1464L17.1464 17.8536ZM12.1464 12.8536L17.1464 17.8536L17.8536 17.1464L12.8536 12.1464L12.1464 12.8536Z" fill="black" />
                     </svg>
-                </button>
+                </button>}
                 <section className='autoComp'>
                     <ul>
                     {(autoComp.length>0 && !codeBarre) &&
