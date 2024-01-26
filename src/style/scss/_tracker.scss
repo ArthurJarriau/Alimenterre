@@ -1,0 +1,52 @@
+.tracker{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .search-bar{
+        display: flex;
+        flex-direction: row;
+        gap: 0px;
+        align-items: center;
+        position: relative;
+        input {
+            background-color: white;
+            border-radius: 8px;
+            border: 0px solid black;
+            margin: 2vh 0;
+            height: 4vh;
+            width: 60vw;
+            padding: 0 1vw 0 3vw;
+            max-width: 350px;
+            -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+            box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+            &:focus-visible{
+                outline: none;
+            }
+        }
+        button{
+            height: 3vh;
+            background-color: transparent;
+            border: none;
+            position: absolute;
+            right: 1vw;
+        }
+        .autoComp{
+            position: absolute;
+            bottom: -55px;
+            background-color: white;
+            width: 60vw;
+            max-width: 350px;
+            padding: 0vh 2vw;
+        }
+
+    }
+
+    &__title{
+        margin: 4vh 0 0  0 ;
+        font-family: 'Oswald' , sans-serif;
+        font-weight: 600;
+        font-size: 2.4rem;
+    }
+    
+}

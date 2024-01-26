@@ -7,7 +7,6 @@ const Preferences = () => {
         <select>
           <option value="femme">Femme</option>
           <option value="homme">Homme</option>
-          <option value="mediaquery">Media-query</option>
           <option value="autres">Autres</option>
         </select>
       </div>
