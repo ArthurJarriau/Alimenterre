@@ -21,12 +21,6 @@ const settings = {
         lifetime: 60 * 60 * 24,
         cookieKey: 'lpmiaw-react-auth-token'
     },
-    upload: {
-        uploadDir: path.resolve(
-            './public/uploads'
-        ),
-        baseUrl: '/uploads/'
-    }
 }
 
 debug.enable(settings.loggerName)
