@@ -25,9 +25,7 @@ const Score = () => {
   useEffect(() => {
     getUsers();
   }, []);
-  useEffect(() => {
-    getUsers()
-  }, []);
+  
   if (loginState.user === null) {
     return <Navigate to="/login" />;
   }
