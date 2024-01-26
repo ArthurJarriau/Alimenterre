@@ -88,14 +88,14 @@ const Tracker = () => {
                     <ul>
                     {(autoComp.length>0 && !codeBarre) &&
                             autoComp.map((product, index) => (
-                                <li>
+                                <li onClick={()=> handleComplete(product.product_name_fr)}>
                                     {product.product_name_fr}
                                 </li>
                             )) 
                             
                         }
                         {(autoComp.product && codeBarre) &&
-                                <li >
+                                <li onClick={()=> handleComplete(autoComp.product.product_name_fr)}>
                                     {autoComp.product}
                                 </li>
                            
