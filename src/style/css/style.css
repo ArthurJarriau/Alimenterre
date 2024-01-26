@@ -584,4 +584,92 @@ img {
 .similar__name {
   font-family: "Oswald", sans-serif;
   font-size: 3.5vw;
+}
+
+.landing {
+  padding: 0 5vw;
+}
+.landing__nav {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 2.5vh 0;
+}
+.landing__logo {
+  width: 25vw;
+}
+.landing__link, .landing__link:visited {
+  background-color: #BDDCFC;
+  border-radius: 5px;
+  color: #1E1E1E;
+  font-family: "Quicksand", sans-serif;
+  font-size: 4vw;
+  margin: 0 1vw;
+  padding: 0.75vh 2vw;
+}
+.landing__link:nth-child(2) {
+  background-color: #F47D75;
+}
+.landing__title {
+  font-family: "Oswald", sans-serif;
+  font-size: 8vw;
+  font-weight: 600;
+  margin: 3.5vh 0;
+}
+.landing__subtitle {
+  font-family: "Quicksand", sans-serif;
+  line-height: 1.25;
+  margin: 2vh 0 3vh 0;
+}
+.landing__subtitle span {
+  color: #D2F475;
+}
+.landing__imagefirst {
+  margin-left: 30vw;
+  width: 60vw;
+  margin-bottom: 7.5vh;
+}
+.landing__part {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 7.5vh;
+}
+.landing__titleBis {
+  font-size: 6.5vw;
+  font-family: "Oswald", sans-serif;
+  margin-bottom: 2vh;
+  width: 80vw;
+}
+.landing__paragraph {
+  font-family: "Quicksand", sans-serif;
+  font-size: 3.5vw;
+  line-height: 1.2;
+  width: 45vw;
+}
+.landing__imgBis {
+  width: 30vw;
+}
+.landing__partTer {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 7.5vh;
+}
+.landing__titleTer {
+  font-size: 6.5vw;
+  font-family: "Oswald", sans-serif;
+  margin-bottom: 2vh;
+  width: 80vw;
+}
+.landing__imgTer {
+  width: 40vw;
+}
+.landing__paragraphTer {
+  font-family: "Quicksand", sans-serif;
+  font-size: 3.5vw;
+  line-height: 1.2;
+  width: 45vw;
 }/*# sourceMappingURL=style.css.map */
