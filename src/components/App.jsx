@@ -4,12 +4,13 @@ import Home from "../pages/Home";
 import Landing from "../pages/Landing";
 import Login from "../pages/Login";
 import Logout from "../pages/Logout";
+import Product from "../pages/Product";
 import Profile from "../pages/Profile";
 import Recommandations from "../pages/Recommandations";
 import Register from "../pages/Register";
 import Score from "../pages/Score";
-import Layout from "./Layout";
 import Tracker from "../pages/Tracker";
+import Layout from "./Layout";
 
 export const AuthContext = createContext();
 
@@ -171,6 +172,7 @@ const App = () => {
             <Route path="/profile" element={<Profile />} />
             <Route path="/score" element={<Score />} />
             <Route path="/tracker" element={<Tracker />} />
+            <Route path="/product" element={<Product />} />
           </Routes>
         </Layout>
       </AuthContext.Provider>
