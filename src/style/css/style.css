@@ -209,6 +209,27 @@ table {
   color: white;
 }
 
+.cardhst {
+  align-items: center;
+  background-color: #E1D7D1;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  margin: 1vh 2.5vw;
+  padding: 1vh 7.5vw;
+  width: 95vw;
+}
+.cardhst__img {
+  width: 10vw;
+}
+.cardhst__name {
+  font-family: "Oswald", sans-serif;
+  font-size: 6vw;
+}
+.cardhst__points {
+  font-family: "Quicksand", sans-serif;
+}
+
 .card-score {
   position: relative;
   align-items: center;
