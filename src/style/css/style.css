@@ -104,6 +104,7 @@ table {
 .nav__link {
   color: #1E1E1E;
   display: flex;
+  font-size: 1.2rem;
 }
 
 .leadCard {
@@ -154,13 +155,13 @@ table {
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin: 10vw;
   position: relative;
   width: 80vw;
-  margin-bottom: 15vh;
+  margin-bottom: 12vh;
 }
 .identity__image {
   border-radius: 35vw;
+  height: 35vw;
 }
 .identity__title {
   background-color: #1E1E1E;
@@ -183,7 +184,7 @@ table {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 5vh;
+  margin-top: 5vw;
 }
 .profile__logout {
   background-color: #F47D75;
@@ -448,4 +449,139 @@ img {
 .home__score {
   height: 5vh !important;
   border-radius: 0 0 8px 8px !important;
+}
+
+.product {
+  margin: 0 5vw;
+  width: 90vw;
+}
+
+.aliment {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+}
+.aliment__title {
+  font-family: "Oswald", sans-serif;
+  font-size: 7.5vw;
+  margin: 2.5vh 0;
+}
+.aliment__image {
+  width: 45vw;
+  margin: 2vh 0;
+}
+.aliment__text {
+  font-family: "Quicksand", sans-serif;
+  font-size: 3vw;
+  line-height: 1.5;
+  width: 80vw;
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 90vw;
+}
+.about__title {
+  font-family: "Oswald", sans-serif;
+  font-size: 5vw;
+  margin: 2vh 0;
+  width: 80vw;
+}
+.about__origin {
+  align-items: center;
+  background-color: #F47D75;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 3vw;
+  padding: 1.5vh 0;
+  width: 41vw;
+}
+.about__subtitle {
+  font-family: "Oswald", sans-serif;
+  font-size: 4.5vw;
+  margin-bottom: 1vh;
+}
+.about__text {
+  font-family: "Quicksand", sans-serif;
+  font-size: 3.5vw;
+}
+.about__nutriscore {
+  align-items: center;
+  background-color: #BDDCFC;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  padding: 1.5vh 0;
+  width: 41vw;
+}
+.about__score {
+  font-family: "Quicksand", sans-serif;
+  font-size: 5vw;
+  margin-right: 2vw;
+  margin-bottom: 0.5vh;
+}
+.about__nutriment {
+  align-items: center;
+  background-color: #D2F475;
+  background-image: url("../../../public/img/Vector.svg");
+  background-position-x: 1vh;
+  background-position-y: 3.5vh;
+  background-repeat: no-repeat;
+  background-size: 95%;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  margin: 2.5vh 0;
+  padding: 2.5vh 0;
+  width: 85vw;
+}
+.about__subtitlenutri {
+  font-family: "Oswald", sans-serif;
+  font-size: 6.5vw;
+  margin-bottom: 3.5vh;
+}
+.about__line {
+  display: flex;
+  justify-content: space-between;
+  margin: 1vh 0;
+  padding: 0 5vw;
+  width: 80vw;
+}
+.about__category {
+  font-family: "Oswald", sans-serif;
+  font-size: 5vw;
+}
+.about__data {
+  font-family: "Quicksand", sans-serif;
+}
+
+.similar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 80vw;
+  margin: 0 0vw 20vh 5vw;
+}
+.similar__title {
+  font-family: "Oswald", sans-serif;
+  font-size: 5vw;
+  width: 80vw;
+}
+.similar__pastille {
+  text-align: center;
+  width: 25vw;
+}
+.similar__img {
+  height: 20vw;
+  margin: 2.5vh 0 1.5vh 0;
+  width: 20vw;
+}
+.similar__name {
+  font-family: "Oswald", sans-serif;
+  font-size: 3.5vw;
 }/*# sourceMappingURL=style.css.map */
