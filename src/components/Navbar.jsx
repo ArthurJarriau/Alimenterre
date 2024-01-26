@@ -62,7 +62,7 @@ const Navbar = () => {
                 fill="#C2FB24"
               />
             </svg>
-            <Link to="/" className="nav__link"></Link>
+            <Link to="/home" className="nav__link"></Link>
           </div>
           <div className="nav__content nav__content--right">
             <svg
