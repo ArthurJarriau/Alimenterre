@@ -21,6 +21,15 @@ const ScoreTracker = ({score, size}) => {
       textColor = "#000";
       strokeWidth = "2";
       break;
+    case 'homepage':
+      height = 73;
+      width = 130;
+      radius = 31.5;
+      cy = 31.5;
+      fontSize = "2.5rem";
+      textColor = "#fff";
+      strokeWidth = "2";
+      break;
     case 'large':
       height = 125;
       width = 125;
@@ -43,7 +52,7 @@ const ScoreTracker = ({score, size}) => {
   const offset = circumference - (score / 100 * circumference);
 
   return (
-    <div className="score" >
+    <div>
       <svg height={height} width={width} >
         <g transform={`rotate(-90 ${width/2} ${cy})`}> 
           <circle

@@ -5,9 +5,11 @@ import Landing from "../pages/Landing";
 import Login from "../pages/Login";
 import Logout from "../pages/Logout";
 import Profile from "../pages/Profile";
+import Recommandations from "../pages/Recommandations";
 import Register from "../pages/Register";
+import Score from "../pages/Score";
 import Layout from "./Layout";
-import Recommandations from '../pages/Recommandations';
+import Tracker from "../pages/Tracker";
 
 export const AuthContext = createContext();
 
@@ -96,7 +98,6 @@ const App = () => {
       credentials: "same-origin",
     })
       .then((res) => {
-        console.log(res);
         if (!res.ok) {
           throw new Error("Network response was not ok");
         }
@@ -130,9 +131,28 @@ const App = () => {
       });
   };
 
+  const recupUser = () => {
+    fetch("/api/auth/me", {
+      method: "GET",
+      credentials: "same-origin",
+    })
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return res.json();
+      })
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => {
+        console.error("Error during fetch operation:", error);
+      });
+  };
+
   useEffect(() => {
     checkAuth();
-    //console.log(loginState)
+    recupUser();
   }, []);
 
   return (
@@ -149,6 +169,8 @@ const App = () => {
             <Route path="/logout" element={<Logout />} />
             <Route path="/register" element={<Register />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/score" element={<Score />} />
+            <Route path="/tracker" element={<Tracker />} />
           </Routes>
         </Layout>
       </AuthContext.Provider>
