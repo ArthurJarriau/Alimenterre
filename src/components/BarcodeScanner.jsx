@@ -1,0 +1,43 @@
+import React, { useState } from 'react';
+import Scanner from './Scanner';
+import {Fab, TextareaAutosize, Paper} from '@mui/material';
+import ArrowBack from '@mui/icons-material/ArrowBack';
+import { Link } from "react-router-dom";
+
+const BarcodeScanner = ({setTextareaValue}) => {
+  const [results, setResults] = useState([]);
+  const [scanning, setScanning] = useState(false);
+
+  const _scan = () => {
+    setScanning(!scanning);
+  }
+
+  const _onDetected = result => {
+    setTextareaValue(result.codeResult.code);
+    setResults([...results, result]);
+  };
+
+  return (
+    <div>
+      <Link to="/">
+          <Fab style={{marginRight:10}} color="black">
+              <ArrowBack/>
+          </Fab>
+      </Link>
+      <span>Barcode Scanner</span>
+      
+      <Paper variant="outlined" style={{marginTop:30, width:300, height:200}}>
+        <Scanner onDetected={_onDetected} />
+      </Paper>
+
+      <TextareaAutosize
+            style={{fontSize:32, width:'300px', height:100, marginTop:30}}
+            rowsmax={4}
+            value={results[0] ? "3560071275808" : 'Aucun code barre détecté'}
+        />
+
+    </div>
+  );
+}
+
+export default BarcodeScanner;
