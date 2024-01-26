@@ -2,7 +2,7 @@
   "users": [
     {
       "id": "0",
-      "username":"admin",
+      "username":"Arthur",
       "email": "admin@mail.com",
       "password": "1",
       "role": "admin",
@@ -11,7 +11,7 @@
     },
     {
       "id": "1",
-      "username":"user",
+      "username":"Evan",
       "email": "user@mail.com",
       "password": "azerty",
       "role": "user",
@@ -20,7 +20,7 @@
     },
     {
       "id": "2",
-      "username":"test",
+      "username":"César",
       "email": "test@mail.com",
       "password": "azerty",
       "role": "user",
@@ -29,7 +29,7 @@
     },
     {
       "id": "3",
-      "username":"michel",
+      "username":"Enzo",
       "email": "example@mail.com",
       "password": "azerty",
       "role": "user",
@@ -38,7 +38,7 @@
     },
     {
       "id": "4",
-      "username":"caroline",
+      "username":"Nicolas",
       "email": "exple@mail.com",
       "password": "azerty",
       "role": "user",
@@ -47,7 +47,7 @@
     },
     {
       "id": "5",
-      "username":"cesar",
+      "username":"Paul",
       "email": "okay@mail.com",
       "password": "azerty",
       "role": "user",

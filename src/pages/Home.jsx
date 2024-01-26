@@ -11,7 +11,7 @@ const Home = () => {
   }
   return (
     <section className="home" >
-      <ScoreTracker score={75} size={"homepage"} />
+      <ScoreTracker score={loginState.user.points_gen} size={"homepage"} />
       <div className="home__score">Score</div>
     </section>
   );
